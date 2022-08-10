@@ -1,7 +1,27 @@
 {
-  "name": "md-links",
+  "name": "your-md-links",
   "version": "0.1.0",
+  "description": "Librería de línea de comandos creada con Node.js, que lee y analiza archivos Markdown para indicar los links presentes y sus estadísticas.",
+  "main": "src/md-links.js",
   "engines": {
     "node": ">=16.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fifete/your-md-links.git"
+  },
+  "keywords": [
+    "markdown",
+    "links",
+    "node"
+  ],
+  "author": "Daniela Fuentes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fifete/your-md-links.git/issues"
+  },
+  "devDependencies": {
+    "eslint": "^8.21.0",
+    "jest": "^28.1.3"
   }
 }
