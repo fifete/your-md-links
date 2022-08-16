@@ -21,7 +21,10 @@
     "url": "https://github.com/fifete/your-md-links.git/issues"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "eslint": "eslint --ext .js src/ test/",
+    "pretest": "npm run eslint",
+    "test": "jest --verbose --coverage"
   },
   "devDependencies": {
     "eslint": "^8.21.0",
