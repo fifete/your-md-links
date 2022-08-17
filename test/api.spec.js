@@ -7,32 +7,32 @@ const {
   isFile,
   isMarkdown,
   readFile,
-  getLinks,
+  getLinks
 } = require('../src/api.js')
 
 const existPath = 'C:\\Users\\cosmo\\Documents\\Laboratoria_proyects\\your-md-links\\folder-tests'
 const noExistPath = 'C:\\Users\\cosmo\\Documents\\Laboratoria_proyects\\your-md-links\\filemd1.md'
 const absolutePath = 'C:\\Users\\cosmo\\Documents\\Laboratoria_proyects\\your-md-links\\folder-tests\\filemd1.md'
 const relativePath = 'folder-tests\\filemd1.md'
-const filePath = 'C:\\Users\\cosmo\\Documents\\Laboratoria_proyects\\your-md-links\\folder-tests\\filemd1.md'
-const directoryPath = 'C:\\Users\\cosmo\\Documents\\Laboratoria_proyects\\your-md-links\\folder-tests'
-const markdownFile = 'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/filemd1.md'
+const filePath = 'C:\\Users\\cosmo\\Documents\\Laboratoria_proyects\\your-md-links\\folder-tests\\folderB\\folderC\\filemd3.md'
+const directoryPath = 'C:\\Users\\cosmo\\Documents\\Laboratoria_proyects\\your-md-links\\folder-tests\\folderB\\folderC'
+const markdownFile = 'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB/filemd2.md'
 const txtFile = 'C:\\Users\\cosmo\\Documents\\Laboratoria_proyects\\your-md-links\\folder-tests\\file.txt'
 const outputLinks = [
   {
-    href: 'https://es.wikipedia.org/wiki/Markdown',
-    text: 'Markdown',
-    file: 'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/filemd1.md'
+    href: 'https://docs.npmjs.com/files/package.json',
+    text: 'package.json - Documentación oficial (en inglés)',
+    file: 'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB/filemd2.md'
   },
   {
-    href: 'https://nodejs.org/',
-    text: 'Node.js',
-    file: 'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/filemd1.md'
+    href: 'https://docs.npmjs.com/misc/scripts',
+    text: 'scripts - Documentación oficial (en inglés)',
+    file: 'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB/filemd2.md'
   },
   {
-    href: 'https://user-images.githubusercontent.com/110297/42118443-b7a5f1f0-7bc8-11e8-96ad-9cc5593715a6.jpg',
-    text: 'md-links-image-from-github de laboratoria cohort L',
-    file: 'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/filemd1.md'
+    href: 'https://nodejs.org/api/process.html',
+    text: 'Process - Documentación oficial (en inglés)',
+    file: 'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB/filemd2.md'
   }
 ]
 // 1. test for verify if the path exists
