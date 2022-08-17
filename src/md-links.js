@@ -9,7 +9,7 @@ const {
 
 const verifyLinks = require('./validate')
 
-const mdLinks = (path, options = { validate: true }) => new Promise((resolve, reject) => {
+const mdLinks = (path, options = { validate: false }) => new Promise((resolve, reject) => {
   const absolutePath = convertToAbsolutePath(path)
   if (isDirectory(absolutePath)) {
     const files = getFiles(absolutePath)
@@ -41,11 +41,11 @@ const mdLinks = (path, options = { validate: true }) => new Promise((resolve, re
   }
 })
 
-const read = mdLinks('C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/file.txt')
+/* const read = mdLinks('C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB')
 read.then(links => {
   console.log(links)
 }).catch(err => {
   console.log(err)
-})
+}) */
 
 module.exports = mdLinks

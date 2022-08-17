@@ -77,8 +77,8 @@ const getLinks = path => {
 // const read = getLinks('C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/filemd1.md')
 // const read = getLinks('C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/filemd1.md')
 // console.log(read)
-const read = getLinks('C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB/filemd2.md')
-console.log(read)
+// const read = getFiles('C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB')
+// console.log(read)
 module.exports = {
   pathExists,
   isAbsolutePath,
@@ -92,3 +92,7 @@ module.exports = {
   readFile,
   getLinks,
 }
+/* [
+  'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB/filemd2.md',
+  'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB/folderC/filemd3.md'
+] */

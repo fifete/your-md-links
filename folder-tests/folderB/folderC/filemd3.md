@@ -11,7 +11,7 @@ Mediante **issues** y **milestones** podrás organizar y planificar
 tareas y objetivos concretos.
 
 Tomando en consideración los **entregables** del proyecto, el
-[9. Checklist](#9-checklist) y los **pasos** que definiste en tu
+[git hub pages](https://pages.github.co/) y los **pasos** que definiste en tu
 `diagrama de flujo`, crea tu planificación en GitHub Projects.
 
 ### Antes de codear
