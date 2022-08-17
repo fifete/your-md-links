@@ -32,16 +32,32 @@ const isDirectory = path => fs.lstatSync(path).isDirectory()
 // 5. Read the content of a directory
 const readDirectory = path => fs.readdirSync(path)
 
-// 6. Know if the path is a file
+// 6. Get all files from a directory
+const getFiles = path => {
+  const files = []
+  readDirectory(path).forEach(file => {
+    const filePath = path + '/' + file
+    if (isFile(filePath)) {
+      if (isMarkdown(filePath)) {
+        files.push(filePath)
+      }
+    } else {
+      files.push(...getFiles(filePath))
+    }
+  })
+  return files
+}
+
+// 7. Know if the path is a file
 const isFile = path => fs.lstatSync(path).isFile()
 
-// 7. Validate if path extension is md
+// 8. Validate if path extension is md
 const isMarkdown = path => path.endsWith('.md')
 
-// 8. Read the content of a file
+// 9. Read the content of a file
 const readFile = path => fs.readFileSync(path, 'utf8')
 
-// 8.1. Get links from a md file
+// 9.1. Get links from a md file
 const getLinks = path => {
   const content = readFile(path)
   const regex = /\[(.*)\]\(((?:\/|https?:\/\/).*)\)/g
@@ -59,15 +75,17 @@ const getLinks = path => {
 
 // Making a proof
 // const read = getLinks('C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/filemd1.md')
-const read = getLinks('C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/filemd1.md')
-
-console.log(read)
+// const read = getLinks('C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/filemd1.md')
+// console.log(read)
+// const read = getFiles('C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests')
+// console.log(read)
 module.exports = {
   pathExists,
   isAbsolutePath,
   toAbsolute,
   isDirectory,
   readDirectory,
+  getFiles,
   convertToAbsolutePath,
   isFile,
   isMarkdown,
