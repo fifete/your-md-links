@@ -22,7 +22,7 @@ const convertToAbsolutePath = path => {
       return toAbsolute(path)
     }
   } else {
-    console.log(`${path} does not exist`)
+    throw new Error('Path does not exist')
   }
 }
 

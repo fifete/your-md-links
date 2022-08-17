@@ -7,7 +7,7 @@ const {
   isFile,
   isMarkdown,
   readFile,
-  getLinks
+  getLinks,
 } = require('../src/api.js')
 
 const existPath = 'C:\\Users\\cosmo\\Documents\\Laboratoria_proyects\\your-md-links\\folder-tests'

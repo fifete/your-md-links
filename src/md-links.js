@@ -34,16 +34,18 @@ const mdLinks = (path, options = { validate: true }) => new Promise((resolve, re
         resolve(links)
       }
     } else {
-      reject(`${absolutePath} is not a markdown file`)
+      reject(new Error('The path is not a markdown file'))
     }
   } else {
-    reject(`${absolutePath} does not exist`)
+    reject(new Error('The path is not a directory or a file'))
   }
 })
 
-const read = mdLinks('C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB/filemd2.md')
+const read = mdLinks('C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/file.txt')
 read.then(links => {
   console.log(links)
 }).catch(err => {
   console.log(err)
 })
+
+module.exports = mdLinks
