@@ -1,4 +1,6 @@
 const {
+  isDirectory,
+  readDirectory,
   isFile,
   isMarkdown,
   convertToAbsolutePath,
@@ -30,7 +32,7 @@ const mdLinks = (path, options = { validate: true }) => new Promise((resolve, re
   }
 })
 
-/* const read = mdLinks('C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/filemd1.md')
+const read = mdLinks('C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/filemd1.md')
 read.then(links => {
   console.log(links)
-}) */
+})
