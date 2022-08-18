@@ -16,7 +16,13 @@ const mdLinks = (path, options = { validate: false }) => new Promise((resolve, r
     const links = files.map(file => getLinks(file))
     const allLinks = [].concat(...links)
     if (options.validate) {
-      resolve(verifyLinks(allLinks))
+      // resolve(verifyLinks(allLinks))
+      verifyLinks(allLinks)
+        .then(links => {
+          resolve(links)
+        }).catch(err => {
+          reject(err)
+        })
     } else {
       resolve(allLinks)
     }

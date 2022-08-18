@@ -44,27 +44,27 @@ const validateFalseforDirectory = [
   {
     href: 'https://docs.npmjs.com/files/package.json',
     text: 'package.json - Documentación oficial (en inglés)',
-    file: 'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB/filemd2.md',
+    file: 'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB/filemd2.md'
   },
   {
     href: 'https://docs.npmjs.com/misc/scripts/',
     text: 'scripts - Documentación oficial (en inglés)',
-    file: 'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB/filemd2.md',
+    file: 'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB/filemd2.md'
   },
   {
     href: 'https://nodejs.org/api/process.ht',
     text: 'Process - Documentación oficial (en inglés)',
-    file: 'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB/filemd2.md',
+    file: 'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB/filemd2.md'
   },
   {
     href: 'https://www.youtube.com/watch?v=Lub5qOmY4JQ',
     text: 'recurso',
-    file: 'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB/folderC/filemd3.md',
+    file: 'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB/folderC/filemd3.md'
   },
   {
     href: 'https://pages.github.co/',
     text: 'git hub pages',
-    file: 'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB/folderC/filemd3.md',
+    file: 'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB/folderC/filemd3.md'
   }
 ]
 
@@ -89,12 +89,12 @@ const validateFalseforFile = [
   {
     href: 'https://www.youtube.com/watch?v=Lub5qOmY4JQ',
     text: 'recurso',
-    file: 'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB/folderC/filemd3.md',
+    file: 'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB/folderC/filemd3.md'
   },
   {
     href: 'https://pages.github.co/',
     text: 'git hub pages',
-    file: 'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB/folderC/filemd3.md',
+    file: 'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB/folderC/filemd3.md'
   }
 ]
 

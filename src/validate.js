@@ -5,7 +5,7 @@ const verifyLinks = (links) => {
   return Promise.all(links.map(link => {
     return fetch(link.href)
       .then(response => {
-        if (response.status === 200) {
+        if (response.ok) {
           return {
             ...link,
             status: response.status,
@@ -56,5 +56,5 @@ const verifyLinks = (links) => {
     })
 }
 seeStatus()
-console.log('hola') */
+*/
 module.exports = verifyLinks
