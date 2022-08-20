@@ -7,7 +7,6 @@ const path = require('path')
 const pathExists = path => fs.existsSync(path)
 
 // 2. Verify if the path is absolute
-// const isAbsolute = path => path.startsWith('/')
 const isAbsolutePath = (inputPath) => path.isAbsolute(inputPath)
 
 // 3. Convert relative path to absolute path
@@ -73,7 +72,6 @@ const getLinks = path => {
   return links
 }
 
-// Making a proof
 // const read = getLinks('C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/filemd1.md')
 // const read = getLinks('C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/filemd1.md')
 // console.log(read)
@@ -90,9 +88,5 @@ module.exports = {
   isFile,
   isMarkdown,
   readFile,
-  getLinks,
+  getLinks
 }
-/* [
-  'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB/filemd2.md',
-  'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB/folderC/filemd3.md'
-] */

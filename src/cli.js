@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-import {
+const {
   getNumberOfLinks, getUniqueLinks, getNumberOfBrokenLinks
-} from './stats.js'
-import { mdLinks } from './md-links.js'
+} = require('./stats.js')
+const mdLinks = require('./md-links.js')
 
 // get all the arguments from the command line excluding the first and second argument
 const args = process.argv.slice(2)
@@ -12,17 +12,26 @@ if (args.length === 1) {
   if (args[0] === '--help') {
     console.log(`
     Usage: md-links <path-to-file> [options]
-    Options:
-      --help                Print this help text
-      --validate            Print href, text, file, message(ok or fail) and status.
-      --stats               Print total and unique links
-      --validate --stats    Print the number of broken links
-      --stats --validate    Print total, unique and broken links.
+
+    +____________________+_________________________________________________________+
+    |      Comands       |                         Output                          |
+    +____________________+_________________________________________________________+
+    | md-links path      | Print href, text and file.                              |
+    +____________________+_________________________________________________________+
+    | --stats            | Print total and unique links.                           |
+    +____________________+_________________________________________________________+
+    | --validate         | Print href, text, file, message(ok or fail) and status. |
+    +____________________+_________________________________________________________+
+    | --validate --stats | Print total, unique and broken links.                   |
+    +____________________+_________________________________________________________+
+    | --stats --validate | Print total, unique and broken links.                   |
+    +____________________+_________________________________________________________+
+    | --help             | Print comands list.                                     |
+    +____________________+_________________________________________________________+
     `)
   } else if (args[0] === '') {
-    console.log('⚠ Invalid comand. If you need help, please type --help')
+    console.log('⚠ Invalid comand. If you need help, please type  md-links --help')
   } else {
-    // if it is a file path, call mdLinks function with the path as argument and validate option as false
     mdLinks(args[0], { validate: false })
       .then(links => {
         console.log(links)
@@ -54,11 +63,10 @@ if (args.length === 2) {
         })
       break
 
-    default: console.log('⚠ Invalid comand. If you need help, please type --help')
+    default: console.log('⚠ Invalid comand. If you need help, please type  md-links --help')
   }
 }
 
-// if it receives three arguments, path to file and two options --validate and --stats or --stats and --validate
 if (args.length === 3) {
   if (
     (args[1] === '--validate' && args[2] === '--stats') ||
@@ -76,6 +84,6 @@ if (args.length === 3) {
         console.log(err)
       })
   } else {
-    console.log('⚠ Invalid comand. If you need help, please type --help')
+    console.log('⚠ Invalid comand. If you need help, please type  md-links --help')
   }
 }

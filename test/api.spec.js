@@ -25,12 +25,12 @@ const outputLinks = [
     file: 'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB/filemd2.md'
   },
   {
-    href: 'https://docs.npmjs.com/misc/scripts',
+    href: 'https://docs.npmjs.com/misc/scripts/',
     text: 'scripts - Documentación oficial (en inglés)',
     file: 'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB/filemd2.md'
   },
   {
-    href: 'https://nodejs.org/api/process.html',
+    href: 'https://nodejs.org/api/process.ht',
     text: 'Process - Documentación oficial (en inglés)',
     file: 'C:/Users/cosmo/Documents/Laboratoria_proyects/your-md-links/folder-tests/folderB/filemd2.md'
   }
@@ -57,28 +57,22 @@ describe('toAbsolute', () => {
     expect(toAbsolute(relativePath)).toBe(absolutePath)
   })
 })
-/* describe('isDirectory', () => {
+describe('isDirectory', () => {
   it('should return true if the path is a directory', () => {
-    expect(isDirectory(path)).toBe(true)
+    expect(isDirectory(directoryPath)).toBe(true)
   })
   it('should return false if the path is not a directory', () => {
-    expect(isDirectory(falsePath)).toBe(false)
-  })
-  it('should return false if the path is empty', () => {
-    expect(isDirectory('')).toBe(false)
+    expect(isDirectory(relativePath)).toBe(false)
   })
 })
 describe('readDirectory', () => {
   it('should return an array of files', () => {
-    expect(readDirectory(path)).toEqual(['filemd1.md', 'filemd2.md'])
+    expect(readDirectory(existPath)).toEqual(['file.txt', 'filemd1.md', 'filemd2.md', 'folderB'])
   })
   it('should return an empty array if the path is not a directory', () => {
-    expect(readDirectory(falsePath)).toEqual([])
+    expect(readDirectory(directoryPath)).toEqual(['filemd3.md'])
   })
-  it('should return an empty array if the path is empty', () => {
-    expect(readDirectory('')).toEqual([])
-  })
-}) */
+})
 describe('isFile', () => {
   it('should return true if the path is a file', () => {
     expect(isFile(filePath)).toBe(true)
