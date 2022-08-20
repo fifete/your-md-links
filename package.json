@@ -20,6 +20,9 @@
   "bugs": {
     "url": "https://github.com/fifete/your-md-links.git/issues"
   },
+  "bin": {
+    "md-links": "src/cli.js"
+  },
   "scripts": {
     "start": "node index.js",
     "eslint": "eslint --ext .js src/ test/",
