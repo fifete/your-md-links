@@ -1,6 +1,6 @@
 {
   "name": "your-md-links",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Librería de línea de comandos creada con Node.js, que lee y analiza archivos Markdown para indicar los links presentes y sus estadísticas.",
   "main": "src/md-links.js",
   "engines": {
