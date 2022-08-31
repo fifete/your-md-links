@@ -18,7 +18,7 @@
 Para instalar la librería your md links, se necesitará escribir el siguiente comando en la terminal.
 
 ``` js
-npm i your-md-links
+npm i your-markdown-links
 ```
 
 # 3. Realización del Proyecto
@@ -27,11 +27,11 @@ npm i your-md-links
 
 ### A) JavaScript API
 
-[Diagrama API](https://github.com/fifete/LIM018-your-md-links/blob/main/images/JavaScript-flowchart.png)
+[Diagrama API](https://github.com/fifete/your-md-links/blob/main/images/CLI-flowchart.png)
 
 ### B) CLI (Command Line Interface - Interfaz de Línea de Comando)
 
-[Diagrama CLI](https://github.com/fifete/LIM018-your-md-links/blob/main/images/CLI-flowchart.png)
+[Diagrama CLI](https://github.com/fifete/your-md-links/blob/main/images/JavaScript-flowchart.png)
 
 ## 3.2 Descripción del proceso ✍🏼
 ### A) JavaScript API
@@ -75,7 +75,7 @@ Con `validate:true` :
 El ejecutable de nuestra aplicación debe poder ejecutarse de la siguiente
 manera a través de la **terminal**:
 
-`md <path-to-file> [options]`
+`md-links <path-to-file> [options]`
 
 El comportamiento por defecto no debe validar si las URLs responden ok o no,
 solo debe identificar el archivo markdown (a partir de la ruta que recibe como
@@ -87,9 +87,7 @@ que hay dentro del link (truncado a 50 caracteres).
 
 ## 📌 `--help`
 
-<div align="center">
-<img src="../images/help.png" width="600">
-</div>
+Muestra un cuadro con los comandos que se pueden utilizar
 
 ## 📌 `--validate`
 
@@ -97,19 +95,36 @@ Si pasamos la opción `--validate`, el módulo debe hacer una petición HTTP par
 averiguar si el link funciona o no. Si el link resulta en una redirección a una
 URL que responde ok, entonces consideraremos el link como ok.
 
-El _output_ incluye la palabra `ok` o `fail` después de
-la URL, así como el status de la respuesta recibida a la petición HTTP a dicha
-URL.
+Por ejemplo:
+
+```sh
+$ md-links ./some/example.md --validate
+./some/example.md http://algo.com/2/3/ ok 200 Link a algo
+./some/example.md https://otra-cosa.net/algun-doc.html fail 404 algún doc
+./some/example.md http://google.com/ ok 301 Google
+```
 
 ## 📌 `--stats`
 
 Si pasamos la opción `--stats` el output (salida) será un texto con estadísticas
 básicas sobre los links.
+
+```sh
+$ md-links ./some/example.md --stats
+Total: 3
+Unique: 3
+```
 ## 📌 `--stats --validate` o `--validate --stats`
 
 También podemos combinar `--stats` y `--validate` para obtener estadísticas que
 necesiten de los resultados de la validación.
 
+```sh
+$ md-links ./some/example.md --stats --validate
+Total: 3
+Unique: 3
+Broken: 1
+```
 # 4. Tecnologías empleadas 👩🏾‍💻
 
 ## Para la Planificación ✍
