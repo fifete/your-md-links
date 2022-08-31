@@ -67,7 +67,7 @@ describe('isDirectory', () => {
 })
 describe('readDirectory', () => {
   it('should return an array of files', () => {
-    expect(readDirectory(existPath)).toEqual(['file.txt', 'filemd1.md', 'filemd2.md', 'folderB'])
+    expect(readDirectory(existPath)).toEqual(['file.txt', 'filemd1.md', 'folderB'])
   })
   it('should return an empty array if the path is not a directory', () => {
     expect(readDirectory(directoryPath)).toEqual(['filemd3.md'])
