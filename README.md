@@ -10,7 +10,7 @@
 ***
 # 1. your md Links
 
- 👩🏽‍💻 **your-MD-LINKS** : Librería de línea de comando (CLI) desarrollada con Node. js,  que permite validar y reportar algunas estadísticas📊 las URLs que se encuentran en los archivos 📁 en formato Markdown 📑 dada una ruta.
+ 👩🏽‍💻 **your-markdown-LINKS** : Librería de línea de comando (CLI) desarrollada con Node. js,  que permite validar y reportar algunas estadísticas📊 las URLs que se encuentran en los archivos 📁 en formato Markdown 📑 dada una ruta.
 
 ***
 
@@ -19,6 +19,11 @@ Para instalar la librería your md links, se necesitará escribir el siguiente c
 
 ``` js
 npm i your-markdown-links
+```
+Para poder utilizar la librería en cualquier terminar, instalar de forma global:
+
+``` js
+npm i -g your-markdown-links
 ```
 
 # 3. Realización del Proyecto
@@ -70,6 +75,29 @@ Con `validate:true` :
 * `status`: Código de respuesta HTTP.
 * `ok`: Mensaje `fail` en caso de fallo u `ok` en caso de éxito.
 
+#### Ejemplo de uso (resultados como comentarios)
+
+```js
+const mdLinks = require("your-markdown-links");
+
+mdLinks("./some/example.md")
+  .then(links => {
+    // => [{ href, text, file }, ...]
+  })
+  .catch(console.error);
+
+mdLinks("./some/example.md", { validate: true })
+  .then(links => {
+    // => [{ href, text, file, status, ok }, ...]
+  })
+  .catch(console.error);
+
+mdLinks("./some/dir")
+  .then(links => {
+    // => [{ href, text, file }, ...]
+  })
+  .catch(console.error);
+```
 ### B) CLI (Command Line Interface - Interfaz de Línea de Comando)
 
 El ejecutable de nuestra aplicación debe poder ejecutarse de la siguiente
@@ -87,7 +115,9 @@ que hay dentro del link (truncado a 50 caracteres).
 
 ## 📌 `--help`
 
-Muestra un cuadro con los comandos que se pueden utilizar
+<div align="center">
+<img src="./images/md-links--help.png" width="600">
+</div>
 
 ## 📌 `--validate`
 
